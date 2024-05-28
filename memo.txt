@@ -1,0 +1,6 @@
+npm init react-app firstapp
+
+cd firstapp
+npm start
+
+
