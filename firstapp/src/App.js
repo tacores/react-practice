@@ -1,7 +1,10 @@
 import './App.css';
 import { DessertsList, desserts }  from "./DessertsList";
-import RegisterForm from "./registerForm"
-import SwitchThemeRoot from "./switchTheme"
+import RegisterForm from "./registerForm";
+import SwitchThemeRoot from "./switchTheme";
+import GiftCard from "./giftCard";
+import TimerComponent from './timerComponent';
+import FetchUser from './fetchUser';
 
 function App() {
   return (
@@ -11,12 +14,24 @@ function App() {
         <DessertsList data={desserts} />
       </div>
       <div className="example_container">
-        <h1>フォームと状態の例</h1>
+        <h1>フォームとステートの例</h1>
         <RegisterForm />
+      </div>
+      <div className="example_container">
+        <h1>ステート更新の例</h1>
+        <GiftCard />
       </div>
       <div className="example_container">
         <h1>コンテキストの例</h1>
         <SwitchThemeRoot />
+      </div>
+      <div className="example_container">
+        <h1>useEffectの例 Timer</h1>
+        <TimerComponent />
+      </div>
+      <div className="example_container">
+        <h1>useEffectの例 Fetch</h1>
+        <FetchUser />
       </div>
     </div>
   );

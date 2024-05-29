@@ -73,10 +73,16 @@ function RegisterForm() {
             Password <sup>*</sup>
         </label>
         <input placeholder="Password" type="password" value={password.value} onChange={(e)=>{
-          var newPassword = {...password}; // オブジェクトの場合はスプレッド演算子でコピーを作るのが作法
-          newPassword.value = e.target.value;
-          newPassword.isTouched = true;
-          setPassword(newPassword)
+          //var newPassword = {...password}; // オブジェクトの場合はスプレッド演算子でコピーを作るのが作法
+          //newPassword.value = e.target.value;
+          //newPassword.isTouched = true;
+          //setPassword(newPassword);
+          
+          // よりナイスな書き方
+          // セッターにラムダ関数を渡すと、ステートを引数としてラムダ関数が呼び出されるらしい
+          setPassword(prevState => {
+            return {...prevState, value: e.target.value, isTouched: true};
+          })
           }} />
         {password.isTouched && password.value.length < 8 && PasswordErrorMessage() } 
         </div>
