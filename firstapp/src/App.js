@@ -5,6 +5,7 @@ import SwitchThemeRoot from "./switchTheme";
 import GiftCard from "./giftCard";
 import TimerComponent from './timerComponent';
 import FetchUser from './fetchUser';
+import WeekDay from './weekDay';
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
       <div className="example_container">
         <h1>useEffectの例 Fetch</h1>
         <FetchUser />
+      </div>
+      <div className="example_container">
+        <h1>カスタムフックの例 Fetch</h1>
+        <WeekDay />
       </div>
     </div>
   );
