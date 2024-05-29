@@ -72,7 +72,12 @@ function RegisterForm() {
         <label>
             Password <sup>*</sup>
         </label>
-        <input placeholder="Password" type="password" value={password.value} onChange={(e)=>{setPassword({value:e.target.value, isTouched: true })}} />
+        <input placeholder="Password" type="password" value={password.value} onChange={(e)=>{
+          var newPassword = {...password}; // オブジェクトの場合はスプレッド演算子でコピーを作るのが作法
+          newPassword.value = e.target.value;
+          newPassword.isTouched = true;
+          setPassword(newPassword)
+          }} />
         {password.isTouched && password.value.length < 8 && PasswordErrorMessage() } 
         </div>
         <div className="Field">
