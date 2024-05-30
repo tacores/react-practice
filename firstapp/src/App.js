@@ -6,6 +6,8 @@ import GiftCard from "./giftCard";
 import TimerComponent from './timerComponent';
 import FetchUser from './fetchUser';
 import WeekDay from './weekDay';
+import RadioGroupExample from './radioGroupExample';
+import MouseTracker from './mouseTracker';
 
 function App() {
   return (
@@ -37,6 +39,14 @@ function App() {
       <div className="example_container">
         <h1>カスタムフックの例 Fetch</h1>
         <WeekDay />
+      </div>
+      <div className="example_container">
+        <h1>React.cloneElement、React.Children.mapの例</h1>
+        <RadioGroupExample />
+      </div>
+      <div className="example_container">
+        <h1>レンダーpropsの例</h1>
+        <MouseTracker />
       </div>
     </div>
   );
