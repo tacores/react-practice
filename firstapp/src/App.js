@@ -8,6 +8,7 @@ import FetchUser from './fetchUser';
 import WeekDay from './weekDay';
 import RadioGroupExample from './radioGroupExample';
 import MouseTracker from './mouseTracker';
+import ReducerExample from './ReducerExample';
 
 function App() {
   return (
@@ -47,6 +48,10 @@ function App() {
       <div className="example_container">
         <h1>レンダーpropsの例</h1>
         <MouseTracker />
+      </div>
+      <div className="example_container">
+        <h1>Reducerの例</h1>
+        <ReducerExample />
       </div>
     </div>
   );
